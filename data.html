@@ -1,0 +1,49 @@
+<html>
+<head>
+<title>데이터 처리</title>
+</head>
+<body>
+<h1>데이터 처리</h1>
+<script>
+function max(arr) {
+  maxnum = 0
+  for ( k=0 ; k<arr.length ; k++) {
+     if ( maxnum < arr[k] ) {
+       maxnum = arr[k]
+    }
+  }
+  return maxnum
+}
+function min(arr) {
+  minnum = 100
+  for ( k=0 ; k<arr.length ; k++) {
+     if ( minnum > arr[k] ) {
+       minnum = arr[k]
+    }
+  }
+  return minnum
+}
+function sum(arr) {
+  total = 0
+  for ( k=0 ; k<arr.length ; k++ ) {
+     total += arr[k]
+  }
+  return total
+}
+data = prompt("공백으로 분리된 여러 숫자 입력")
+document.write("<h1>입력 데이터 : " + data + "<br>")
+data1 = data.split(" ")
+document.write("입력 데이터 개수 : " + data1.length + "<br>")
+document.write("입력 데이터 배열 : " + data1 + "<br>")
+data2 = data1.map(Number)
+document.write("입력 데이터 숫자 배열 : " + data2 + "<br>")
+maxnum = max(data2)
+document.write("max number = " + maxnum + "<br>")
+minnum = min(data2)
+document.write("min number = " + minnum + "<br>")
+sumdata = sum(data2)
+document.write("sum = " + sumdata + "<br>")
+document.write("average = " + sumdata/data2.length + "<br></h1>")
+</script>
+</body>
+</html>
