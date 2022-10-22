@@ -1,0 +1,25 @@
+<html>
+<head>
+<title>add function</title>
+</head>
+<body>
+<h1>더하기 함수</h1>
+<script>
+function sum(a) {
+  total = 0
+  for ( i=0 ; i<=a ; i++) {
+     total += i
+  }
+  return total
+}
+d = sum(10)
+document.write(d)
+time1 = new Date()
+e = sum(100000000)
+time2 = new Date()
+stime = time2 - time1
+document.write("<h1>" + e +"</h1>")
+document.write("<h1>" + stime +"ms</h1>")
+</script>
+</body>
+</html>
