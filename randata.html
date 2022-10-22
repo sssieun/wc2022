@@ -1,0 +1,48 @@
+<html>
+<head>
+<title>데이터 처리</title>
+</head>
+<body>
+<h1>데이터 처리</h1>
+<script>
+function max(arr) {
+  maxnum = 0
+  for ( k=0 ; k<arr.length ; k++) {
+     if ( maxnum < arr[k] ) {
+       maxnum = arr[k]
+    }
+  }
+  return maxnum
+}
+function min(arr) {
+  minnum = 1000
+  for ( k=0 ; k<arr.length ; k++) {
+     if ( minnum > arr[k] ) {
+       minnum = arr[k]
+    }
+  }
+  return minnum
+}
+function sum(arr) {
+  total = 0
+  for ( k=0 ; k<arr.length ; k++ ) {
+     total += arr[k]
+  }
+  return total
+}
+data2 = []
+for ( i=0 ; i<10000000 ; i++) {
+  data2[i] = Math.floor(Math.random() * 100)
+}
+document.write("<h1>입력 데이터 갯수 : " + data2.length + "<br>")
+//document.write("입력 데이터 숫자 배열 : " + data2 + "<br>")
+maxnum = max(data2)
+document.write("max number = " + maxnum + "<br>")
+minnum = min(data2)
+document.write("min number = " + minnum + "<br>")
+sumdata = sum(data2)
+document.write("sum = " + sumdata + "<br>")
+document.write("average = " + sumdata/data2.length + "<br></h1>")
+</script>
+</body>
+</html>
