@@ -1,0 +1,34 @@
+<html>
+<head>
+<script>
+function checkNumber() {
+   turns = 10
+   num = Math.floor(Math.random()*100) + 1
+   while (turns > 0) {
+      guess = prompt("1-100사이 정수 입력", "Your guess: ")
+      if ( guess == null ) { break }
+      else if ( guess == num ) { 
+         alert("You won! The number was " + num)
+         break
+      }
+      else if ( guess < num ) {
+         turns--
+         alert("Too low. 남은 횟수는 : " + turns)
+      }
+      else if ( guess > num ) {
+         turns--
+         alert("Too high. 남은 횟수는 : " +turns)
+      }
+   }
+   if (turns == 0) {
+      alert ("You failed to guess.")
+   }
+}
+</script>
+</head>
+<body>
+<h1>숫자맞추기게임</h1>
+<p>1부터 100사이의 숫자 맞추기</p>
+<button onclick="checkNumber()">시작</button>
+</body>
+</html>
